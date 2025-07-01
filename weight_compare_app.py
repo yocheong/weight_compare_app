@@ -4,11 +4,9 @@ import streamlit as st
 st.set_page_config(page_title="무게 비교 시뮬레이터", page_icon="⚖️")
 
 # 🖼️ 상단 이미지 삽입 (웹 이미지 사용)
-st.image(
-    "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Balance_scale_justice.svg/600px-Balance_scale_justice.svg.png",
-    caption="양팔저울로 무게 순서를 알아보는 체험 활동",
-    use_column_width=True
-)
+from PIL import Image
+img = Image.open("balance_illustration.png")
+st.image(img, caption="양팔저울 무게 비교 체험", use_column_width=True)
 
 # 🧾 제목 및 설명
 st.title("⚖️ 양팔저울 무게 비교 시뮬레이터")
